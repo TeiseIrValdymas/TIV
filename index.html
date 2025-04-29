@@ -1,133 +1,143 @@
 <!DOCTYPE html>
 <html lang="lt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VšĮ Teisė ir valdymas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teisė ir valdymas</title>
+  <link rel="icon" href="logo.png">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       scroll-behavior: smooth;
     }
     .navbar {
-      background-color: #1C3B52;
+      background-color: #163345;
     }
-    .navbar-brand img {
-      height: 50px;
-    }
-    .nav-link {
+    .navbar a {
       color: white !important;
-      font-weight: 500;
     }
     .hero {
-      background-color: #F7F7F7;
+      background: linear-gradient(to right, #163345, #D48722);
+      color: white;
       padding: 80px 20px;
       text-align: center;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      color: #1C3B52;
-    }
-    .hero p {
-      font-size: 1.2rem;
-    }
-    section {
-      padding: 60px 20px;
-    }
     .section-title {
-      color: #1C3B52;
-      font-weight: 600;
-      margin-bottom: 30px;
-      font-size: 2rem;
+      color: #163345;
     }
-    .footer {
-      background-color: #1C3B52;
+    .highlight {
+      color: #D48722;
+      font-weight: bold;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    footer {
+      background: #163345;
       color: white;
-      padding: 20px;
+      padding: 20px 0;
       text-align: center;
+    }
+    img.logo {
+      max-height: 60px;
     }
   </style>
 </head>
 <body>
 
-<!-- Navigacija -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+<!-- NAVIGACIJA -->
+<nav class="navbar navbar-expand-lg fixed-top shadow">
   <div class="container">
-    <a class="navbar-brand" href="#"><img src="logotipas.png" alt="Teisė ir valdymas"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+    <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" class="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navmenu">
+    <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#apie">Apie mus</a></li>
-        <li class="nav-item"><a class="nav-link" href="#paslaugos">Paslaugos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#parama">Parama</a></li>
-        <li class="nav-item"><a class="nav-link" href="#kontaktai">Kontaktai</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">Apie mus</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Paslaugos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacts">Kontaktai</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Hero sekcija -->
-<section class="hero mt-5">
+<!-- HERO -->
+<section class="hero">
   <div class="container">
-    <h1>Nemokama teisinė konsultacija telefonu</h1>
-    <p>(be dokumentų vertinimo ir rengimo)</p>
-    <p>Registruokitės žinute arba paskambinkite</p>
+    <h1 class="animate__animated animate__fadeInDown">VšĮ <span class="highlight">Teisė ir valdymas</span></h1>
+    <p class="lead animate__animated animate__fadeInUp">Aukštos kvalifikacijos teisininkų komanda Jūsų verslui.</p>
   </div>
 </section>
 
-<!-- Apie mus -->
-<section id="apie" class="container">
-  <h2 class="section-title">Apie mus</h2>
-  <p>VšĮ “Teisė ir valdymas” – aukštos kvalifikacijos teisininkų komanda, teikianti paslaugas darbo teisės, sutarčių teisės, asmens duomenų apsaugos, viešųjų pirkimų, civilinės teisės, intelektinės nuosavybės klausimais.</p>
-  <p>Mums svarbu dirbti profesionaliai, greitai, pasiūlyti kūrybiškus ir naudą kuriančius sprendimus.</p>
-</section>
-
-<!-- Paslaugos -->
-<section id="paslaugos" class="bg-light">
-  <div class="container">
-    <h2 class="section-title">Paslaugos</h2>
-    <ul>
-      <li>Teisinės konsultacijos</li>
-      <li>Darbo teisė ir dokumentų rengimas</li>
-      <li>Asmens duomenų apsauga, dokumentai, auditas</li>
-      <li>Viešųjų pirkimų dokumentai, pretenzijos</li>
-      <li>Sutartys, skundai, kolektyviniai susitarimai</li>
-    </ul>
+<!-- APIE MUS -->
+<section id="about" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title mb-4">Apie mus</h2>
+    <p>VšĮ „Teisė ir valdymas“ – kvalifikuoti teisininkai darbo teisės, sutarčių, duomenų apsaugos, viešųjų pirkimų, civilinės teisės srityse. Mūsų tikslas – greitai ir profesionaliai spręsti klientų problemas, siūlyti efektyvius ir kūrybiškus sprendimus.</p>
   </div>
 </section>
 
-<!-- Parama -->
-<section id="parama">
+<!-- PASLAUGOS -->
+<section id="services" class="bg-light py-5">
   <div class="container">
-    <h2 class="section-title">Skirkite 1,2 % GPM paramą</h2>
-    <p>Padėkite mums padėti daugiau žmonių – skirkite 1,2 % paramą:</p>
-    <p><strong>VšĮ „Teisė ir valdymas“</strong></p>
-    <p>Juridinio asmens kodas: <strong>304466016</strong></p>
-    <p>Prisijunkite prie <a href="https://deklaravimas.vmi.lt/" target="_blank">https://deklaravimas.vmi.lt/</a> iki gegužės 2 d.</p>
+    <h2 class="section-title mb-5" data-aos="fade-up">Paslaugos</h2>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="card p-3 shadow-sm h-100">
+          <h5 class="highlight">Dokumentų rengimas</h5>
+          <p>Sutartys, skundai, vidaus tvarkos taisyklės, GDPR dokumentai, pretenzijos ir kt.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card p-3 shadow-sm h-100">
+          <h5 class="highlight">Darbo teisė</h5>
+          <p>Sutarčių sudarymas, vidaus dokumentai, konsultacijos, atstovavimas ginčuose.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card p-3 shadow-sm h-100">
+          <h5 class="highlight">Asmens duomenų apsauga</h5>
+          <p>Auditas, konsultacijos, dokumentų rengimas, duomenų apsaugos pareigūno funkcijos.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Kontaktai -->
-<section id="kontaktai" class="bg-light">
-  <div class="container">
-    <h2 class="section-title">Kontaktai</h2>
-    <p><strong>Tel.:</strong> +370 689 77282</p>
-    <p><strong>El. paštas:</strong> <a href="mailto:vsiteiseirvaldymas@gmail.com">vsiteiseirvaldymas@gmail.com</a></p>
-    <p><strong>Facebook:</strong> <a href="https://www.facebook.com/teiseirvaldymas" target="_blank">facebook.com/teiseirvaldymas</a></p>
-    <p><strong>Darbo laikas:</strong> I–V 10:00–18:00</p>
-    <p>Paslaugas teikiame visoje Lietuvoje.</p>
+<!-- KONTAKTAI -->
+<section id="contacts" class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-title mb-4">Kontaktai</h2>
+    <p><strong>Tel.:</strong> +370 689 77282<br>
+    <strong>El. paštas:</strong> <a href="mailto:vsiteiseirvaldymas@gmail.com">vsiteiseirvaldymas@gmail.com</a><br>
+    <strong>Facebook:</strong> <a href="https://www.facebook.com/teiseirvaldymas" target="_blank">Teisė ir valdymas</a><br>
+    <strong>Darbo laikas:</strong> I–V 10.00–18.00</p>
   </div>
 </section>
 
-<!-- Footer -->
-<div class="footer">
-  © 2025 VšĮ Teisė ir valdymas
-</div>
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    &copy; 2025 VšĮ „Teisė ir valdymas“. Visos teisės saugomos.
+  </div>
+</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Skriptai -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
