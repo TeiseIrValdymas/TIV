@@ -2,142 +2,105 @@
 <html lang="lt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teisė ir valdymas</title>
-  <link rel="icon" href="logo.png">
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <!-- AOS -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="icon" type="image/png" href="/logo.png">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
-    }
-    .navbar {
-      background-color: #163345;
-    }
-    .navbar a {
-      color: white !important;
-    }
-    .hero {
-      background: linear-gradient(to right, #163345, #D48722);
-      color: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .section-title {
-      color: #163345;
-    }
-    .highlight {
-      color: #D48722;
-      font-weight: bold;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    }
-    footer {
-      background: #163345;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-    img.logo {
-      max-height: 60px;
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-<body>
-
-<!-- NAVIGACIJA -->
-<nav class="navbar navbar-expand-lg fixed-top shadow">
-  <div class="container">
-    <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo" class="logo"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">Apie mus</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Paslaugos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contacts">Kontaktai</a></li>
-      </ul>
+<body class="bg-gray-50 text-gray-900 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <img src="logo.png" alt="Teisė ir valdymas logotipas" class="h-12">
+      <nav class="space-x-6 hidden md:block">
+        <a href="#apie" class="hover:text-blue-600">Apie mus</a>
+        <a href="#paslaugos" class="hover:text-blue-600">Paslaugos</a>
+        <a href="#kontaktai" class="hover:text-blue-600">Kontaktai</a>
+      </nav>
     </div>
-  </div>
-</nav>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container">
-    <h1 class="animate__animated animate__fadeInDown">VšĮ <span class="highlight">Teisė ir valdymas</span></h1>
-    <p class="lead animate__animated animate__fadeInUp">Aukštos kvalifikacijos teisininkų komanda Jūsų verslui.</p>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-900 to-blue-600 text-white text-center py-20 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Teisinės paslaugos, kuriomis galite pasitikėti</h1>
+    <p class="text-lg md:text-xl mb-4">📞 Nemokama konsultacija telefonu (be dokumentų vertinimo ir rengimo)</p>
+    <p class="text-lg md:text-xl mb-8">📩 Registracija – tiesiog parašykite mums žinutę</p>
+    <a href="#kontaktai" class="bg-white text-blue-700 px-6 py-3 rounded-full text-lg font-semibold shadow hover:bg-gray-100 transition">Susisiekti</a>
+  </section>
 
-<!-- APIE MUS -->
-<section id="about" class="py-5">
-  <div class="container" data-aos="fade-up">
-    <h2 class="section-title mb-4">Apie mus</h2>
-    <p>VšĮ „Teisė ir valdymas“ – kvalifikuoti teisininkai darbo teisės, sutarčių, duomenų apsaugos, viešųjų pirkimų, civilinės teisės srityse. Mūsų tikslas – greitai ir profesionaliai spręsti klientų problemas, siūlyti efektyvius ir kūrybiškus sprendimus.</p>
-  </div>
-</section>
+  <!-- GPM parama -->
+  <section class="bg-yellow-100 py-8 px-4 text-center">
+    <h2 class="text-2xl font-semibold mb-2">Skirkite 1,2% GPM paramą</h2>
+    <p class="mb-1">VšĮ „Teisė ir valdymas“</p>
+    <p class="mb-1">Juridinio asmens kodas: 304466016</p>
+    <a href="https://deklaravimas.vmi.lt/" target="_blank" class="text-blue-700 underline">Prisijunkite iki gegužės 2 d.</a>
+  </section>
 
-<!-- PASLAUGOS -->
-<section id="services" class="bg-light py-5">
-  <div class="container">
-    <h2 class="section-title mb-5" data-aos="fade-up">Paslaugos</h2>
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up">
-        <div class="card p-3 shadow-sm h-100">
-          <h5 class="highlight">Dokumentų rengimas</h5>
-          <p>Sutartys, skundai, vidaus tvarkos taisyklės, GDPR dokumentai, pretenzijos ir kt.</p>
+  <!-- Apie mus -->
+  <section id="apie" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-3xl font-bold mb-6 text-center">Apie mus</h2>
+    <p class="mb-6 text-lg">VšĮ “Teisė ir valdymas” – aukštos kvalifikacijos teisininkų komanda, teikiantys paslaugas darbo teisės, sutarčių teisės, asmens duomenų apsaugos, viešųjų pirkimų, civilinės teisės, intelektinės nuosavybės klausimais. Mums svarbu paslaugas suteikti profesionaliai ir greitai, atliepti klientų poreikius, pasiūlyti jiems kūrybiškus ir naudą kuriančius sprendimus.</p>
+    <ul class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-700">
+      <li>Asmens duomenų apsauga</li>
+      <li>Darbo teisė</li>
+      <li>Civilinė teisė</li>
+      <li>Viešieji pirkimai</li>
+      <li>Intelektinė nuosavybė</li>
+      <li>Teisinės konsultacijos</li>
+    </ul>
+  </section>
+
+  <!-- Paslaugos -->
+  <section id="paslaugos" class="bg-gray-100 py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Paslaugos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Teisiniai dokumentai</h3>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Sutartys, skundai, darbo sutartys, personalo dokumentai</li>
+            <li>Vidaus teisės aktai, viešųjų pirkimų dokumentai</li>
+            <li>Pretenzijos, atsakymai</li>
+          </ul>
         </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card p-3 shadow-sm h-100">
-          <h5 class="highlight">Darbo teisė</h5>
-          <p>Sutarčių sudarymas, vidaus dokumentai, konsultacijos, atstovavimas ginčuose.</p>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Asmens duomenų apsauga</h3>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Politikos, tvarkos, auditai</li>
+            <li>Pareigūno funkcijos, poveikio vertinimas</li>
+            <li>Nuolatinė priežiūra ir dokumentų rengimas</li>
+          </ul>
         </div>
-      </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="card p-3 shadow-sm h-100">
-          <h5 class="highlight">Asmens duomenų apsauga</h5>
-          <p>Auditas, konsultacijos, dokumentų rengimas, duomenų apsaugos pareigūno funkcijos.</p>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Darbo teisė</h3>
+          <ul class="list-disc pl-5 space-y-2">
+            <li>Darbo sutartys, tvarkos, kodeksai, instrukcijos</li>
+            <li>Konsultacijos ir atstovavimas institucijose</li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- KONTAKTAI -->
-<section id="contacts" class="py-5">
-  <div class="container" data-aos="fade-up">
-    <h2 class="section-title mb-4">Kontaktai</h2>
-    <p><strong>Tel.:</strong> +370 689 77282<br>
-    <strong>El. paštas:</strong> <a href="mailto:vsiteiseirvaldymas@gmail.com">vsiteiseirvaldymas@gmail.com</a><br>
-    <strong>Facebook:</strong> <a href="https://www.facebook.com/teiseirvaldymas" target="_blank">Teisė ir valdymas</a><br>
-    <strong>Darbo laikas:</strong> I–V 10.00–18.00</p>
-  </div>
-</section>
+  <!-- Kontaktai -->
+  <section id="kontaktai" class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Kontaktai</h2>
+      <p class="mb-2">Tel. Nr.: <a href="tel:+37068977282" class="text-blue-600">+370 689 77282</a></p>
+      <p class="mb-2">El. paštas: <a href="mailto:vsiteiseirvaldymas@gmail.com" class="text-blue-600">vsiteiseirvaldymas@gmail.com</a></p>
+      <p class="mb-2">Facebook: <a href="https://www.facebook.com/teiseirvaldymas" class="text-blue-600" target="_blank">Teisė ir valdymas</a></p>
+      <p class="mb-2">Darbo laikas: I–V 10.00–18.00 val.</p>
+      <p class="mb-2">Paslaugas teikiame visoje Lietuvoje</p>
+    </div>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    &copy; 2025 VšĮ „Teisė ir valdymas“. Visos teisės saugomos.
-  </div>
-</footer>
-
-<!-- Skriptai -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4">
+    <p>© 2025 VšĮ „Teisė ir valdymas“. Visos teisės saugomos.</p>
+  </footer>
 </body>
 </html>
